@@ -31,3 +31,14 @@ http://www.youtube.com/watch?v=HBbzYKMfx5Y
 DISCLAIMER:
 
 This project is intended for non-commercial educational purposes.
+
+### Tips
+If fps is too low on MacOS, try use full screen mode:
+```python
+pygame.display.set_mode((0,0), pygame.FULLSCREEN))
+```
+
+If game stucked in full screen mode, using:
+```bash
+Shift + Option + Command + Escape
+```
