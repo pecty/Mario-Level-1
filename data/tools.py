@@ -4,8 +4,8 @@ import os
 import pygame as pg
 
 keybinding = {
-    'action':pg.K_s,
-    'jump':pg.K_a,
+    'action':pg.K_z,
+    'jump':pg.K_UP,
     'left':pg.K_LEFT,
     'right':pg.K_RIGHT,
     'down':pg.K_DOWN
@@ -54,6 +54,8 @@ class Control(object):
             if event.type == pg.QUIT:
                 self.done = True
             elif event.type == pg.KEYDOWN:
+                if event.key == pg.K_ESCAPE:
+                    self.done = True
                 self.keys = pg.key.get_pressed()
                 self.toggle_show_fps(event.key)
             elif event.type == pg.KEYUP:
